@@ -1,19 +1,22 @@
+package week_01;
 import java.util.Scanner;
 
-public class Study {
+public class Week01 {
     public static void main(String[] args){
         try (Scanner scanner = new Scanner(System.in)) {
             int number;
             boolean first = true;
+
             do {        
                 if (!first) {
                     System.out.println("[error] 유효한 숫자가 아닙니다. 5 이상의 수를 입력하세요");
                 }
-                
+        
                 System.out.print("아기사자 수 입력: ");
                 number = scanner.nextInt();
-
+                scanner.nextLine();
                 first = false;
+
             } while (number < 5);
 
             String[] babyLions = new String[number];
